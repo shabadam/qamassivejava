@@ -1,6 +1,6 @@
 package ru.netology.javaqa.qamassivejava.services;
 public class StatsService {
-    public int AmountAllSales(int[] stats) {
+    public int amountAllSales(int[] stats) {
         int amount = 0;
         for (int i = 0; i < stats.length; i++) {
             amount = amount + stats[i];
@@ -8,12 +8,12 @@ public class StatsService {
         return amount;
     }
 
-    public int AverageAmount(int[] stats) {
-        int average = AmountAllSales(stats);
+    public int averageAmount(int[] stats) {
+        int average = amountAllSales(stats);
         return average / 12;
     }
 
-    public int MaxSales(int[] stats) {
+    public int maxSales(int[] stats) {
         int max = 0;
         for (int i = 0; i < stats.length; i++) {
             if (stats[i] > stats[max]) {
@@ -23,7 +23,7 @@ public class StatsService {
         return max+1;
     }
 
-    public int MinSales(int[] stats) {
+    public int minSales(int[] stats) {
         int min = 0;
         for (int i = 0; i < stats.length; i++) {
             if (stats[i] < stats[min]) {
@@ -33,9 +33,9 @@ public class StatsService {
         return min+1;
     }
 
-    public int AmountMonthUnderAverage(int[] stats) {
+    public int amountMonthUnderAverage(int[] stats) {
         int underAverage = 0;
-        int average = AverageAmount(stats);
+        int average = averageAmount(stats);
         for (int i = 0; i < stats.length; i++) {
             if (stats[i] < average) {
                 underAverage++;
@@ -44,9 +44,9 @@ public class StatsService {
         return underAverage;
     }
 
-    public int AmountMonthAboveAverage(int[] stats) {
+    public int amountMonthAboveAverage(int[] stats) {
         int aboveAverage = 0;
-        int average = AverageAmount(stats);
+        int average = averageAmount(stats);
         for (int i = 0; i < stats.length; i++) {
             if (stats[i] > average) {
                 aboveAverage++;

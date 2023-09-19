@@ -10,7 +10,7 @@ public class StatsServiceTest {
 
         int[] stats = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAmount = 180;
-        int actualAmount = service.AmountAllSales(stats);
+        int actualAmount = service.amountAllSales(stats);
 
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
@@ -22,7 +22,7 @@ public class StatsServiceTest {
 
         int[] stats = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAverage = 15;
-        int actualAverage = service.AverageAmount(stats);
+        int actualAverage = service.averageAmount(stats);
 
         Assertions.assertEquals(expectedAverage, actualAverage);
     }
@@ -34,7 +34,7 @@ public class StatsServiceTest {
 
         int[] stats = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMax = 6;
-        int actualMax = service.MaxSales(stats);
+        int actualMax = service.maxSales(stats);
 
         Assertions.assertEquals(expectedMax, actualMax);
     }
@@ -46,7 +46,7 @@ public class StatsServiceTest {
 
         int[] stats = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMin = 9;
-        int actualMin = service.MinSales(stats);
+        int actualMin = service.minSales(stats);
 
         Assertions.assertEquals(expectedMin, actualMin);
     }
@@ -58,7 +58,7 @@ public class StatsServiceTest {
 
         int[] stats = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAmountUnderAverage = 5;
-        int actualAmountUnderAverage = service.AmountMonthUnderAverage(stats);
+        int actualAmountUnderAverage = service.amountMonthUnderAverage(stats);
 
         Assertions.assertEquals(expectedAmountUnderAverage, actualAmountUnderAverage);
     }
@@ -70,7 +70,7 @@ public class StatsServiceTest {
 
         int[] stats = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAmountAboveAverage = 5;
-        int actualAmountAboveAverage = service.AmountMonthAboveAverage(stats);
+        int actualAmountAboveAverage = service.amountMonthAboveAverage(stats);
 
         Assertions.assertEquals(expectedAmountAboveAverage, actualAmountAboveAverage);
     }
